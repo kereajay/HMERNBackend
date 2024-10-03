@@ -11,7 +11,7 @@ const generateToken=(user,message,res)=>{
     // localStorage.setItem(cookieName,JSON.stringify(token))
 
      res.status(200).cookie(cookieName,token,{
-        httpOnly:true,
+        // httpOnly:true,
         expires: new Date(
             Date.now() + 7 * 24 * 60 * 60 * 1000
           ),
