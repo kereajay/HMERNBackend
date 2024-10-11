@@ -146,8 +146,10 @@ const logoutadmin = asyncHandler(async (req, res) => {
   try {
     res
       .cookie("adminToken", "", {
-        httpOnly: true,
-        expires: new Date(Date.now()),
+        // httpOnly: true,
+        expires: new Date(0), 
+        sameSite: "none", 
+        secure: true,
       })
       .json({ success: true, message: "admin logout successfully" });
   } catch (err) {

@@ -24,7 +24,7 @@ cloudinary.config({
 
 app.use(cors(
    { 
-    origin: ['https://hmern-frontend.vercel.app', 'https://hmern-dashboard.vercel.app'],
+    origin: ['http://localhost:5173', 'http://localhost:5174','https://hmern-frontend.vercel.app', 'https://hmern-dashboard.vercel.app',],
     credentials: true,}
 ));
 app.use(cookieParser());
